@@ -1,0 +1,47 @@
+model: anthropic-claude-fable-5
+label:
+  en_US: Claude Fable 5
+  zh_Hans: Claude Fable 5
+model_type: llm
+features:
+- agent-thought
+- tool-call
+- multi-tool-call
+- stream-tool-call
+- structured-output
+- vision
+model_properties:
+  mode: chat
+  context_size: 1000000
+parameter_rules:
+- name: temperature
+  use_template: temperature
+  type: float
+- name: top_p
+  use_template: top_p
+  type: float
+- name: frequency_penalty
+  use_template: frequency_penalty
+  type: float
+- name: presence_penalty
+  use_template: presence_penalty
+  type: float
+- name: max_tokens
+  use_template: max_tokens
+  type: int
+  default: 1024
+  min: 1
+  max: 128000
+- name: response_format
+  label:
+    en_US: Response Format
+  type: string
+  required: false
+  options:
+  - text
+  - json_object
+pricing:
+  input: '10'
+  output: '50'
+  unit: '0.000001'
+  currency: USD

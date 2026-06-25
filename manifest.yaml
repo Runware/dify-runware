@@ -1,0 +1,35 @@
+version: 0.0.1
+type: plugin
+author: Runware
+name: runware
+label:
+  en_US: Runware
+description:
+  en_US: Runware inference provider. OpenAI-compatible LLM endpoint serving open models (DeepSeek, Qwen, GLM, Kimi, MiniMax) plus pass-through families.
+  zh_Hans: Runware 推理服务商。兼容 OpenAI API 的 LLM 接口，提供开源模型（DeepSeek、Qwen、GLM、Kimi、MiniMax）及透传系列。
+icon: icon.svg
+icon_dark: icon.svg
+created_at: "2026-06-25T00:00:00Z"
+resource:
+  memory: 1048576
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+plugins:
+  models:
+    - provider/runware.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+tags:
+  - model
+privacy: PRIVACY.md

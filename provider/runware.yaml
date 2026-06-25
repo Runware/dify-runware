@@ -1,0 +1,160 @@
+provider: runware
+label:
+  en_US: Runware
+description:
+  en_US: OpenAI-compatible inference provider hosting open models and pass-through families.
+  zh_Hans: 兼容 OpenAI API 的推理服务商，托管开源模型及透传系列。
+background: "#0E0E10"
+icon_small:
+  en_US: icon_square.svg
+icon_large:
+  en_US: icon.svg
+help:
+  title:
+    en_US: Get your API Key from Runware
+    zh_Hans: 从 Runware 获取 API Key
+  url:
+    en_US: https://runware.ai/
+supported_model_types:
+  - llm
+configurate_methods:
+  - predefined-model
+  - customizable-model
+extra:
+  python:
+    model_sources:
+      - models/llm/llm.py
+    provider_source: provider/runware.py
+models:
+  llm:
+    position: models/llm/_position.yaml
+    predefined:
+      - models/llm/*.yaml
+provider_credential_schema:
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API Key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Enter your Runware API Key
+        zh_Hans: 在此输入您的 Runware API Key
+    - variable: endpoint_url
+      label:
+        en_US: API endpoint URL
+        zh_Hans: API endpoint 地址
+      type: text-input
+      required: false
+      default: https://api.runware.ai/v1
+      placeholder:
+        en_US: Base URL, e.g. https://api.runware.ai/v1
+        zh_Hans: Base URL，例如 https://api.runware.ai/v1
+model_credential_schema:
+  model:
+    label:
+      en_US: Model Name
+      zh_Hans: 模型名称
+    placeholder:
+      en_US: Enter full model id
+      zh_Hans: 输入模型全称
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API Key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Enter your Runware API Key
+        zh_Hans: 在此输入您的 Runware API Key
+    - variable: endpoint_url
+      label:
+        en_US: API endpoint URL
+        zh_Hans: API endpoint 地址
+      type: text-input
+      required: false
+      default: https://api.runware.ai/v1
+      placeholder:
+        en_US: Base URL, e.g. https://api.runware.ai/v1
+        zh_Hans: Base URL，例如 https://api.runware.ai/v1
+    - variable: mode
+      label:
+        en_US: Completion mode
+        zh_Hans: 补全类型
+      type: select
+      required: false
+      default: chat
+      options:
+        - value: chat
+          label:
+            en_US: Chat
+            zh_Hans: 对话
+        - value: completion
+          label:
+            en_US: Completion
+            zh_Hans: 补全
+      show_on:
+        - variable: __model_type
+          value: llm
+    - variable: context_size
+      label:
+        en_US: Model context size
+        zh_Hans: 模型上下文长度
+      type: text-input
+      required: true
+      default: "8192"
+      placeholder:
+        en_US: Enter the model context size
+        zh_Hans: 在此输入模型上下文长度
+    - variable: max_tokens_to_sample
+      label:
+        en_US: Upper bound for max tokens
+        zh_Hans: 最大 token 上限
+      type: text-input
+      required: false
+      default: "4096"
+      show_on:
+        - variable: __model_type
+          value: llm
+    - variable: vision_support
+      label:
+        en_US: Vision support
+        zh_Hans: 是否支持 Vision
+      type: radio
+      required: false
+      default: no_support
+      options:
+        - value: support
+          label:
+            en_US: "Yes"
+            zh_Hans: 是
+        - value: no_support
+          label:
+            en_US: "No"
+            zh_Hans: 否
+      show_on:
+        - variable: __model_type
+          value: llm
+    - variable: function_calling_type
+      label:
+        en_US: Function calling
+        zh_Hans: 函数调用
+      type: select
+      required: false
+      default: tool_call
+      options:
+        - value: no_call
+          label:
+            en_US: Not supported
+            zh_Hans: 不支持
+        - value: tool_call
+          label:
+            en_US: Tool call
+            zh_Hans: Tool Call
+        - value: function_call
+          label:
+            en_US: Function call
+            zh_Hans: Function Call
+      show_on:
+        - variable: __model_type
+          value: llm
