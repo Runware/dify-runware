@@ -1,6 +1,6 @@
 version: 0.0.1
 type: plugin
-author: Runware
+author: runware
 name: runware
 label:
   en_US: Runware
@@ -31,5 +31,5 @@ meta:
     version: "3.12"
     entrypoint: main
 tags:
-  - model
+  - other
 privacy: PRIVACY.md
