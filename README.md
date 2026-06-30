@@ -4,6 +4,29 @@ Registers **Runware** as a first-class model provider in Dify. Runware exposes
 an OpenAI-compatible `/v1/chat/completions` endpoint, so this plugin subclasses
 the Dify SDK's `OAICompatLargeLanguageModel` and only adds Runware-specific
 wiring (branding, credential schema, predefined model catalog).
+ 
+## Install & configure
+ 
+1. Install from the Dify Marketplace, or upload the `.difypkg` directly under
+   **Plugins → Install Plugin → Local Package**.
+2. Go to **Settings → Model Provider → Runware** and add credentials:
+   - **API Key** — required. Get one from [runware.ai](https://runware.ai/).
+   - **API endpoint URL** — optional, defaults to `https://api.runware.ai/v1`.
+     Only change this if you're proxying or self-hosting an OpenAI-compatible
+     endpoint.
+3. Enable the models you want under that provider. Predefined models (Claude,
+   GPT, Gemini, DeepSeek, Qwen, GLM, MiniMax, Kimi, Grok) show up automatically
+   — no per-model setup needed.
+4. For a model not in the predefined list, add it as a **customizable model**:
+   enter the model id, the same API key, and its context size, max output
+   tokens, vision support, and tool-calling support (check Runware's model
+   catalog for these values per model).
+5. Use the model anywhere Dify lets you pick an LLM — chatbot, agent, or
+   workflow node.
+ 
+No other connection requirements: the plugin only calls Runware's
+OpenAI-compatible HTTPS API (`/v1/chat/completions`) with the credentials
+above. No webhooks, no inbound connections, no other services involved.
 
 ## Design note (read before changing the shape)
 
