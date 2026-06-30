@@ -7,3 +7,7 @@ __pycache__/
 tests/
 .github/
 tools/
+.idea/
+.pytest_cache/
+.gitignore
+*.difypkg
