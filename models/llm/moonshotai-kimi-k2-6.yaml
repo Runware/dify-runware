@@ -1,7 +1,6 @@
 model: moonshotai-kimi-k2-6
 label:
   en_US: Kimi K2.6
-  zh_Hans: Kimi K2.6
 model_type: llm
 features:
 - agent-thought
@@ -41,7 +40,7 @@ parameter_rules:
   - text
   - json_object
 pricing:
-  input: '0.6'
-  output: '3.05'
+  input: '0.9'
+  output: '4.2'
   unit: '0.000001'
   currency: USD

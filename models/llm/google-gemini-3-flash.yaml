@@ -1,7 +1,6 @@
 model: google-gemini-3-flash
 label:
   en_US: Google Gemini 3 Flash
-  zh_Hans: Google Gemini 3 Flash
 model_type: llm
 features:
 - agent-thought

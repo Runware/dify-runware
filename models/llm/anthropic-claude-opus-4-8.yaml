@@ -1,7 +1,6 @@
 model: anthropic-claude-opus-4-8
 label:
   en_US: Claude Opus 4.8
-  zh_Hans: Claude Opus 4.8
 model_type: llm
 features:
 - agent-thought

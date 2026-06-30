@@ -1,7 +1,6 @@
 model: minimax-m3
 label:
   en_US: MiniMax M3
-  zh_Hans: MiniMax M3
 model_type: llm
 features:
 - agent-thought

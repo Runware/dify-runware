@@ -1,7 +1,6 @@
 model: openai-gpt-5-4-pro
 label:
   en_US: GPT-5.4 Pro
-  zh_Hans: GPT-5.4 Pro
 model_type: llm
 features:
 - agent-thought

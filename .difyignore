@@ -1,7 +1,9 @@
 .venv/
 __pycache__/
 *.pyc
-tools/
 *.sample.json
 .env
 .git/
+tests/
+.github/
+tools/

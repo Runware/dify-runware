@@ -1,7 +1,6 @@
 model: openai-gpt-5-4-nano
 label:
   en_US: GPT-5.4 Nano
-  zh_Hans: GPT-5.4 Nano
 model_type: llm
 features:
 - agent-thought

@@ -1,7 +1,6 @@
 model: minimax-m2-7
 label:
   en_US: MiniMax-M2.7
-  zh_Hans: MiniMax-M2.7
 model_type: llm
 features:
 - agent-thought
@@ -11,7 +10,7 @@ features:
 - structured-output
 model_properties:
   mode: chat
-  context_size: 131072
+  context_size: 204800
 parameter_rules:
 - name: temperature
   use_template: temperature

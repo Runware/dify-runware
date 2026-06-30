@@ -1,7 +1,6 @@
 model: google-gemini-3-1-flash-lite
 label:
   en_US: Google Gemini 3.1 Flash Lite
-  zh_Hans: Google Gemini 3.1 Flash Lite
 model_type: llm
 features:
 - agent-thought

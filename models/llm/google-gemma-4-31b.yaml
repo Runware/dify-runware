@@ -1,7 +1,6 @@
 model: google-gemma-4-31b
 label:
   en_US: Gemma 4 31B
-  zh_Hans: Gemma 4 31B
 model_type: llm
 features:
 - agent-thought
@@ -9,9 +8,10 @@ features:
 - multi-tool-call
 - stream-tool-call
 - structured-output
+- vision
 model_properties:
   mode: chat
-  context_size: 131072
+  context_size: 262144
 parameter_rules:
 - name: temperature
   use_template: temperature

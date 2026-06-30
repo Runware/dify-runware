@@ -1,7 +1,6 @@
 model: xai-grok-4-3
 label:
   en_US: Grok 4.3
-  zh_Hans: Grok 4.3
 model_type: llm
 features:
 - agent-thought
@@ -9,6 +8,7 @@ features:
 - multi-tool-call
 - stream-tool-call
 - structured-output
+- vision
 model_properties:
   mode: chat
   context_size: 1048576

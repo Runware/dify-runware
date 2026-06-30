@@ -1,7 +1,6 @@
 model: anthropic-claude-fable-5
 label:
   en_US: Claude Fable 5
-  zh_Hans: Claude Fable 5
 model_type: llm
 features:
 - agent-thought

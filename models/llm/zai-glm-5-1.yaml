@@ -1,7 +1,6 @@
 model: zai-glm-5-1
 label:
   en_US: GLM-5.1
-  zh_Hans: GLM-5.1
 model_type: llm
 features:
 - agent-thought
