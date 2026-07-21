@@ -1,7 +1,5 @@
 - google-gemini-3-1-flash-lite
 - google-gemini-3-1-pro
-- minimax-m2-5
-- zai-glm-4-7
 - minimax-m2-7-highspeed
 - minimax-m2-7
 - google-gemini-3-flash
@@ -9,8 +7,6 @@
 - openai-gpt-5-4-mini
 - openai-gpt-5-4-nano
 - openai-gpt-5-4-pro
-- qwen35_397b_a17b_fp8
-- qwen35_27b_fp8
 - zai-glm-5-1
 - anthropic-claude-opus-4-7
 - anthropic-claude-sonnet-4-6
@@ -27,3 +23,9 @@
 - deepseek-v4-pro
 - openai-gpt-5-mini
 - openai-gpt-5-nano
+- openai-gpt-5-1
+- openai-gpt-5-6-luna
+- openai-gpt-5-6-sol
+- openai-gpt-5-6-terra
+- openai-gpt-oss-120b
+- zai-glm-5-2
